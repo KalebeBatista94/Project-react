@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import People from './assets/people.svg'
+import ArrowRight from './assets/arrowRight.svg'
 
-function App() {
+import {
+  Container,
+  Image,
+  ContainerItens,
+  H1,
+  InputLabel,
+  Input,
+  Button,
+} from './styles';
+
+const App = () => {
+  // const hello = 'Hello React'
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Container>
+      <Image alt="logo-imagem" src={People}></Image>
+
+      <ContainerItens>
+        <H1>Olá!</H1>
+
+        <InputLabel>Nome</InputLabel>
+        <Input placeholder="Nome"></Input>
+
+        <InputLabel>Idade</InputLabel>
+        <Input placeholder="Idade"></Input>
+
+        <Button>Cadastrar <img alt="arrow-right" src={ArrowRight} /></Button>
+      </ContainerItens>
+
+    </Container>
   );
 }
 
