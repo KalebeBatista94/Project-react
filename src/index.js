@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import GlobalStyle from './globalStyle';
+import GlobalStyle from './styles/globalStyle';
+import Routes from './routes' //Dentro do Routes decido quem vai ficar na tela principal
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <App /> <GlobalStyle />
+    <Routes /> <GlobalStyle />
   </>
 );
 
