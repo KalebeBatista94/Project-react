@@ -4,12 +4,12 @@ import axios from "axios";
 
 import People from "../../assets/people.svg";
 import ArrowRight from "../../assets/arrowRight.svg";
+import H1 from '../../components/Title';
+import ContainerItens from "../../components/ContainerItens";
 
 import {
   Container,
   Image,
-  ContainerItens,
-  H1,
   InputLabel,
   Input,
   Button,

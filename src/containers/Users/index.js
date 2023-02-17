@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 import axios from "axios"; //integração back-end
 
@@ -6,8 +7,10 @@ import Avatar from "../../assets/avatar.svg";
 import ArrowLeft from "../../assets/arrow-left.svg";
 import Trash from "../../assets/trashCan.svg";
 
-import { Container, Image, ContainerItens, H1, Button, User } from "./styles";
-import { useHistory } from "react-router-dom";
+import H1 from '../../components/Title';
+import ContainerItens from "../../components/ContainerItens";
+
+import { Container, Image, Button, User } from "./styles";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -39,7 +42,7 @@ const Users = () => {
     <Container>
       <Image alt="logo-imagem" src={Avatar}></Image>
 
-      <ContainerItens>
+      <ContainerItens isBlur={true}>
         <H1>Usuários</H1>
 
         <ul>
