@@ -9,8 +9,9 @@ import Trash from "../../assets/trashCan.svg";
 
 import H1 from '../../components/Title';
 import ContainerItens from "../../components/ContainerItens";
+import Button from "../../components/Button";
 
-import { Container, Image, Button, User } from "./styles";
+import { Container, Image, User } from "./styles";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -56,7 +57,7 @@ const Users = () => {
           ))}
         </ul>
 
-        <Button onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
           <img alt="arrow-right" src={ArrowLeft} /> Voltar
         </Button>
       </ContainerItens>

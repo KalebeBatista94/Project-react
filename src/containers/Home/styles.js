@@ -40,29 +40,3 @@ export const Input = styled.input`
   font-size: 18px;
   color: #ffffff;
 `;
-
-export const Button = styled.button`
-  width: 100%;
-  height: 2.8em;
-  margin-top: 70px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 14px;
-  border: none;
-  font-weight: bold;
-  color: #fff;
-  font-size: 17px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  transition: 0.5s;
-  
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-`;

@@ -6,13 +6,13 @@ import People from "../../assets/people.svg";
 import ArrowRight from "../../assets/arrowRight.svg";
 import H1 from '../../components/Title';
 import ContainerItens from "../../components/ContainerItens";
+import Button from "../../components/Button";
 
 import {
   Container,
   Image,
   InputLabel,
   Input,
-  Button,
 } from "./styles";
 
 
