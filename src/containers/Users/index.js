@@ -7,7 +7,7 @@ import Avatar from "../../assets/avatar.svg";
 import ArrowLeft from "../../assets/arrow-left.svg";
 import Trash from "../../assets/trashCan.svg";
 
-import H1 from '../../components/Title';
+import H1 from "../../components/Title";
 import ContainerItens from "../../components/ContainerItens";
 import Button from "../../components/Button";
 
@@ -19,7 +19,9 @@ const Users = () => {
 
   useEffect(() => {
     async function fetchUsers() {
-      const { data: allUsers } = await axios.get("http://localhost:3001/users");
+      const { data: allUsers } = await axios.get(
+        "https://api-user-registration.vercel.app/"
+      );
 
       setUsers(allUsers);
     }
@@ -36,7 +38,7 @@ const Users = () => {
   }
 
   function goBackPage() {
-    history.push('/');
+    history.push("/");
   }
 
   return (

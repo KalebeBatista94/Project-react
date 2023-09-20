@@ -4,34 +4,30 @@ import axios from "axios";
 
 import People from "../../assets/people.svg";
 import ArrowRight from "../../assets/arrowRight.svg";
-import H1 from '../../components/Title';
+import H1 from "../../components/Title";
 import ContainerItens from "../../components/ContainerItens";
 import Button from "../../components/Button";
 
-import {
-  Container,
-  Image,
-  InputLabel,
-  Input,
-} from "./styles";
-
+import { Container, Image, InputLabel, Input } from "./styles";
 
 const App = () => {
   const [users, setUsers] = useState([]);
   const inputName = useRef(); //como se tivesse pegando com o getElementByID
   const inputAge = useRef();
   const history = useHistory();
- 
 
   async function addNewUser() {
-    const { data: newUser } = await axios.post("http://localhost:3001/users", {
-      name: inputName.current.value,
-      age: inputAge.current.value,
-    });
+    const { data: newUser } = await axios.post(
+      "https://api-user-registration.vercel.app",
+      {
+        name: inputName.current.value,
+        age: inputAge.current.value,
+      }
+    );
 
     setUsers([...users, newUser]);
-    
-    history.push('/usuarios');
+
+    history.push("/usuarios");
   }
 
   return (
@@ -50,7 +46,6 @@ const App = () => {
         <Button onClick={addNewUser}>
           Cadastrar <img alt="arrow-right" src={ArrowRight} />
         </Button>
-      
       </ContainerItens>
     </Container>
   );
